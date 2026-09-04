@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk Digital - Menjadi Bos</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           1. VARIABEL & RESET DASAR (LIGHT & DARK SOFT UI PALETTE)
+           ========================================================================== */
+        :root {
+            /* Neumorphic Light Base Colors */
+            --bg-color: #e0e5ec;
+            --text-primary: #2d3748;
+            --text-secondary: #64748b;
+            --accent-primary: #4361ee;
+            --accent-hover: #3a56d4;
+            --accent-soft: #e0e7ff;
+            --badge-bg: #dbeafe;
+            --badge-text: #1e40af;
+            --star-color: #f59e0b;
+
+            /* Neumorphic Light Shadow Calculations */
+            --shadow-dark: #a3b1c6;
+            --shadow-light: #ffffff;
+            
+            /* Extruded / Convex Shadow */
+            --soft-shadow-flat: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+            --soft-shadow-hover: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+            --soft-shadow-sm: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+            
+            /* Inset / Concave Shadow */
+            --soft-shadow-inset: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+            --soft-shadow-inset-deep: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+
+            /* Radius */
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --radius-full: 50px;
+        }
+
+        /* Dark Mode Override */
+        [data-theme="dark"] {
+            --bg-color: #1e242d;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-primary: #5c7cfa;
+            --accent-hover: #748ffc;
+            --accent-soft: #242e42;
+            --badge-bg: #1e293b;
+            --badge-text: #93c5fd;
+
+            --shadow-dark: #14181f;
+            --shadow-light: #28303c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 40px;
+            overflow-x: hidden;
+        }
+
+        /* Container Pembungkus */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ==========================================================================
+           2. ELEMEN UI DASAR (BUTTONS & INPUTS)
+           ========================================================================== */
+        .btn-soft {
+            background: var(--bg-color);
+            color: var(--text-primary);
+            border: none;
+            outline: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: var(--soft-shadow-sm);
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-soft:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--soft-shadow-flat);
+            color: var(--accent-primary);
+        }
+
+        .btn-soft:active, .btn-soft.active {
+            transform: translateY(0);
+            box-shadow: var(--soft-shadow-inset);
+            color: var(--accent-primary);
+        }
+
+        .btn-icon {
+            width: 44px;
+            height: 44px;
+            padding: 0;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-accent {
+            background: var(--accent-primary);
+            color: #ffffff;
+            border: none;
+            outline: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light);
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 7px 7px 16px var(--shadow-dark), -7px -7px 16px var(--shadow-light);
+        }
+
+        .btn-accent:active {
+            transform: translateY(0);
+            box-shadow: inset 3px 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .input-soft {
+            background: var(--bg-color);
+            border: none;
+            outline: none;
+            padding: 14px 20px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--soft-shadow-inset);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .input-soft:focus {
+            box-shadow: var(--soft-shadow-inset-deep);
+        }
+
+        /* ==========================================================================
+           3. HEADER & NAVIGASI
+           ========================================================================== */
+        header {
+            padding: 24px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(224, 229, 236, 0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        [data-theme="dark"] header {
+            background: rgba(30, 36, 45, 0.85);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--soft-shadow-flat);
+            background: var(--bg-color);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        /* Logo Icon Mahkota Startup Boss */
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--bg-color);
+            box-shadow: var(--soft-shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-primary);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-icon {
+            box-shadow: var(--soft-shadow-inset);
+            color: var(--accent-hover);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
+        .hero {
+            padding: 60px 0 40px 0;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--soft-shadow-inset);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 36px auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ==========================================================================
+           5. KATALOG SECTION (FILTER & SEARCH)
+           ========================================================================== */
+        .catalog-section {
+            padding: 40px 0;
+        }
+
+        .controls-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border-radius: var(--radius-full);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .search-wrapper {
+            position: relative;
+            min-width: 280px;
+            flex: 1;
+            max-width: 360px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           6. GRID PRODUK & KARTU (CARD)
+           ========================================================================== */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            background: var(--bg-color);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--soft-shadow-flat);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--soft-shadow-hover);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 180px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--soft-shadow-inset);
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.08), rgba(67, 97, 238, 0.2));
+            color: var(--accent-primary);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--bg-color);
+            color: var(--accent-primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            box-shadow: var(--soft-shadow-sm);
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .product-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid rgba(163, 177, 198, 0.2);
+        }
+
+        .price-tag {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        /* State Kosong */
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--soft-shadow-inset);
+        }
+
+        .empty-icon {
+            font-size: 3rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        /* ==========================================================================
+           7. TESTIMONIALS SECTION (SOFT UI)
+           ========================================================================== */
+        .testimonials-section {
+            padding: 70px 0 30px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-color);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--soft-shadow-flat);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--soft-shadow-hover);
+        }
+
+        .stars-row {
+            display: flex;
+            gap: 4px;
+            color: var(--star-color);
+            margin-bottom: 16px;
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            box-shadow: var(--soft-shadow-inset);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-size: 0.98rem;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        /* ==========================================================================
+           8. MODAL NOTIFIKASI
+           ========================================================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background: var(--bg-color);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--soft-shadow-hover);
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .modal-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        /* ==========================================================================
+           9. FOOTER & MEDIA SOSIAL
+           ========================================================================== */
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--soft-shadow-flat);
+            background: var(--bg-color);
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            box-shadow: var(--soft-shadow-sm);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            color: var(--accent-primary);
+            box-shadow: var(--soft-shadow-flat);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           10. RESPONSIVE MEDIA QUERIES
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .product-grid, .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .product-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .controls-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-wrapper {
+                max-width: 100%;
+            }
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-actions {
+                gap: 8px;
+            }
+            .btn-soft span.btn-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGASI
+       ========================================================================== -->
+    <header>
+        <div class="container">
+            <nav class="nav-wrapper">
+                <a href="#" class="logo">
+                    <!-- Icon Logo Boss Modern (Mahkota Startup) -->
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 4l3 12h14l3-12-6 7-4-5-4 5-6-7z"/>
+                            <circle cx="12" cy="19" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span>Menjadi Bos</span>
+                </a>
+                
+                <div class="nav-actions">
+                    <!-- Tombol Toggle Dark / Light Mode -->
+                    <button class="btn-soft btn-icon" id="themeToggleBtn" aria-label="Ganti Tema">
+                        <svg id="themeIconSun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg id="themeIconMoon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+
+                    <button class="btn-soft" id="btnContactNav">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span class="btn-text">Hubungi Kami</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ==========================================================================
+           HERO SECTION
+           ========================================================================== -->
+        <section class="hero">
+            <span class="hero-badge">Akselerasi Startup & Bisnis</span>
+            <h1 class="hero-title">Siap Menjadi Bos Bisnis Digital<br>dan Bangun Kerajaan Anda</h1>
+            <p class="hero-subtitle">Dapatkan blueprint bisnis, e-course kepemimpinan, dan aset startup pilihan untuk membawa Anda dari profesional menjadi pemilik bisnis independen.</p>
+            <div class="hero-actions">
+                <button class="btn-accent" onclick="filterCategory('E-Course')">Lihat E-Course</button>
+                <button class="btn-soft" onclick="filterCategory('E-Book')">Lihat E-Book</button>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           KATALOG SECTION (FILTER & SEARCH)
+           ========================================================================== -->
+        <section class="catalog-section" id="katalog">
+            <!-- Controls Bar: Filter & Search -->
+            <div class="controls-bar">
+                <div class="filter-group">
+                    <button class="btn-soft filter-btn active" data-category="Semua">Semua</button>
+                    <button class="btn-soft filter-btn" data-category="E-Course">E-Course</button>
+                    <button class="btn-soft filter-btn" data-category="E-Book">E-Book</button>
+                    <button class="btn-soft filter-btn" data-category="Assets">Assets</button>
+                </div>
+
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" class="input-soft" placeholder="Cari materi Menjadi Bos...">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+            </div>
+
+            <!-- Grid Produk -->
+            <div class="product-grid" id="productGrid">
+                <!-- Produk di-render dinamis oleh JavaScript -->
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           TESTIMONIALS SECTION (BUKTI & REVIEW MEMBER)
+           ========================================================================== -->
+        <section class="testimonials-section">
+            <div class="section-header">
+                <span class="hero-badge">Kisah Nyata Member</span>
+                <h2 class="section-title">Mereka yang Berhasil Menjadi Bos</h2>
+                <p class="section-subtitle">Simak pengalaman para profesional dan founder yang berhasil mengakselerasi karier dan mendirikan bisnis impian mereka.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <!-- Testimoni 1 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            ★★★★★
+                        </div>
+                        <p class="testimonial-quote">"Materi Startup Pitch Deck dan Masterclass-nya membuka mata saya cara memvalidasi ide bisnis hingga berhasil mendapatkan pendanaan awal (angel investment) dalam 3 bulan."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RH</div>
+                        <div class="author-info">
+                            <h4>Rendra Hartanto</h4>
+                            <p>Founder, Agrio Tech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            ★★★★★
+                        </div>
+                        <p class="testimonial-quote">"E-Book Blueprint Menjadi Bos sangat realistis dan actionable. Dari pekerja kantoran biasa, sekarang saya memimpin tim remote dengan 8 staf kreatif mandiri."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Siti Maulida</h4>
+                            <p>Managing Director, PixelCraft Agency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars-row">
+                            ★★★★★
+                        </div>
+                        <p class="testimonial-quote">"Aset template finansial dan Notion pack-nya sangat menghemat ratusan jam kerja. Sangat direkomendasikan bagi siapa saja yang ingin serius membangun bisnis!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div class="author-info">
+                            <h4>Aditya Pratama</h4>
+                            <p>Co-Founder, EduKits Digital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER & SOSIAL MEDIA LENGKAP
+       ========================================================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2026 Menjadi Bos. Hak Cipta Dilindungi Undang-Undang.</p>
+                
+                <div class="social-links">
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok" title="TikTok">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.32V8.67a8.28 8.28 0 0 0 4.91 1.6V6.83a4.87 4.87 0 0 1-1-.14z"/>
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram" title="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook" title="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube" title="YouTube">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       MODAL DIALOG (SOFT UI INTERACTION)
+       ========================================================================== -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <h3 class="modal-title" id="modalTitle">Informasi</h3>
+            <p class="modal-text" id="modalText">Detail instruksi akan muncul di sini.</p>
+            <button class="btn-accent" style="width: 100%;" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       JAVASCRIPT LOGIC
+       ========================================================================== -->
+    <script>
+        // Data Katalog Produk Digital (Mock Data)
+        const products = [
+            {
+                id: 1,
+                title: "Masterclass Startup Founder 2026",
+                category: "E-Course",
+                price: "Rp 349.000",
+                description: "Langkah demi langkah membangun startup dari ide awal, pitching ke investor, hingga meraih profitabilitas pertama.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l3 12h14l3-12-6 7-4-5-4 5-6-7z"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/></svg>`
+            },
+            {
+                id: 2,
+                title: "Blueprint Menjadi Bos Tanpa Modal Besar",
+                category: "E-Book",
+                price: "Rp 129.000",
+                description: "Buku panduan mendirikan bisnis agency dan layanan digital independen dengan sistem kerja remote.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>`
+            },
+            {
+                id: 3,
+                title: "3D Executive & Boss Icon Pack",
+                category: "Assets",
+                price: "Rp 149.000",
+                description: "Kumpulan 150+ ikon 3D bertema bisnis, startup, dan eksekutif bergaya Soft UI beresolusi tinggi.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>`
+            },
+            {
+                id: 4,
+                title: "Startup Pitch Deck & Financial Model",
+                category: "Assets",
+                price: "Rp 199.000",
+                description: "Template siap pakai untuk presentasi investor dan kalkulasi keuangan startup otomatis di Notion & Excel.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`
+            },
+            {
+                id: 5,
+                title: "Kepemimpinan & Growth Hacking 101",
+                category: "E-Course",
+                price: "Rp 279.000",
+                description: "Kuasai cara merekrut tim impian, mendelegasikan tugas seperti bos sejati, dan menaikkan skala operasional.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`
+            },
+            {
+                id: 6,
+                title: "E-Book Financial Freedom Founder",
+                category: "E-Book",
+                price: "Rp 89.000",
+                description: "Panduan memisahkan keuangan pribadi dan perusahaan serta investasi reksadana/saham untuk pebisnis.",
+                icon: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`
+            }
+        ];
+
+        // State Aplikasi
+        let activeCategory = "Semua";
+        let searchQuery = "";
+        let isDarkMode = false;
+
+        // DOM Elements
+        const productGrid = document.getElementById("productGrid");
+        const searchInput = document.getElementById("searchInput");
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const modalOverlay = document.getElementById("modalOverlay");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalText = document.getElementById("modalText");
+        const btnContactNav = document.getElementById("btnContactNav");
+        const themeToggleBtn = document.getElementById("themeToggleBtn");
+        const themeIconSun = document.getElementById("themeIconSun");
+        const themeIconMoon = document.getElementById("themeIconMoon");
+
+        // Toggle Dark / Light Mode
+        function toggleTheme() {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                document.documentElement.setAttribute("data-theme", "dark");
+                themeIconSun.style.display = "block";
+                themeIconMoon.style.display = "none";
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+                themeIconSun.style.display = "none";
+                themeIconMoon.style.display = "block";
+            }
+        }
+
+        themeToggleBtn.addEventListener("click", toggleTheme);
+
+        // Render Kartu Produk
+        function renderProducts() {
+            const filteredProducts = products.filter(product => {
+                const matchesCategory = activeCategory === "Semua" || product.category === activeCategory;
+                const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      product.description.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filteredProducts.length === 0) {
+                productGrid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <h3>Materi Tidak Ditemukan</h3>
+                        <p style="color: var(--text-secondary); margin-top: 6px;">Coba gunakan kata kunci lain atau pilih kategori lain.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            productGrid.innerHTML = filteredProducts.map(product => `
+                <div class="product-card">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder">
+                            ${product.icon}
+                        </div>
+                        <span class="card-badge">${product.category}</span>
+                    </div>
+                    <h3 class="product-title">${product.title}</h3>
+                    <p class="product-desc">${product.description}</p>
+                    <div class="card-footer">
+                        <span class="price-tag">${product.price}</span>
+                        <button class="btn-accent" style="padding: 8px 16px; font-size: 0.85rem;" onclick="handleBuy('${product.title}')">Beli Sekarang</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter Kategori
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                activeCategory = btn.getAttribute("data-category");
+                renderProducts();
+            });
+        });
+
+        // Search Input
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.trim();
+            renderProducts();
+        });
+
+        function filterCategory(catName) {
+            const targetBtn = Array.from(filterBtns).find(btn => btn.getAttribute("data-category") === catName);
+            if (targetBtn) {
+                targetBtn.click();
+                document.getElementById("katalog").scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Modal Handlers
+        function handleBuy(productTitle) {
+            showModal("Beli Produk", `Selamat! Anda selangkah lebih dekat untuk menjadi bos. Anda memilih paket <strong>"${productTitle}"</strong>. Tim kami akan segera memproses akses Anda.`);
+        }
+
+        btnContactNav.addEventListener("click", () => {
+            showModal("Hubungi Menjadi Bos", "Butuh konsultasi atau kemitraan bisnis? Hubungi tim kami via WhatsApp di <strong>+62 812-3456-7890</strong> atau email <strong>halo@menjadibos.com</strong>.");
+        });
+
+        function showModal(title, text) {
+            modalTitle.innerText = title;
+            modalText.innerHTML = text;
+            modalOverlay.classList.add("active");
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove("active");
+        }
+
+        modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+
+        // Init
+        document.addEventListener("DOMContentLoaded", () => {
+            renderProducts();
+        });
+    </script>
+</body>
+</html>
