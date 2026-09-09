@@ -477,12 +477,18 @@
         /* Form Submit: Secure Cloudflare Worker Direct Invoice Request */
         submitBtn.addEventListener('click', async () => {
             const name = document.getElementById('buyer-name').value.trim();
-            const phone = document.getElementById('buyer-phone').value.trim();
+            let phone = document.getElementById('buyer-phone').value.trim();
             const email = document.getElementById('buyer-email').value.trim();
 
             if (!name || !phone || !email) {
                 alert('Harap isi Nama Lengkap, No. WhatsApp, dan Email terlebih dahulu.');
                 return;
+            }
+
+            // Normalisasi Format No. WhatsApp (contoh: 0812... -> 62812...)
+            phone = phone.replace(/[^0-9]/g, '');
+            if (phone.startsWith('0')) {
+                phone = '62' + phone.substring(1);
             }
 
             const finalAmount = BASE_PRICE - discountAmount;
@@ -518,26 +524,33 @@
                     const data = await response.json();
                     
                     // Ambil URL Tagihan Mayar yang sukses dibuat oleh Worker
-                    const invoiceUrl = data?.data?.link || data?.data?.paymentUrl || data?.data?.[0]?.link;
+                    const invoiceUrl = data?.data?.link || data?.data?.paymentUrl || (Array.isArray(data?.data) ? data?.data[0]?.link : null);
 
                     if (invoiceUrl) {
                         // Redirect pembeli langsung ke halaman pembayaran aktif!
                         window.location.href = invoiceUrl;
                         return;
+                    } else if (data?.messages || data?.error) {
+                        console.warn("Mayar API Warning:", data);
+                        alert("Mayar API Warning: " + (data.messages || data.error));
                     }
                 } catch (error) {
                     console.error("Worker Integration Error:", error);
+                    alert("Gagal terhubung ke Cloudflare Worker. Mengalihkan ke halaman checkout...");
                 } finally {
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Pesan Sekarang";
                 }
             }
 
-            // Fallback: Redirect Auto-Fill jika Worker belum dipasang
+            // Fallback: Redirect Auto-Fill dengan Kupon ke Mayar jika Worker gagal/belum dipasang
             const mayarRedirectUrl = new URL(MAYAR_PRODUCT_URL);
             mayarRedirectUrl.searchParams.set('name', name);
             mayarRedirectUrl.searchParams.set('email', email);
             mayarRedirectUrl.searchParams.set('mobile', phone);
+            if (discountAmount > 0) {
+                mayarRedirectUrl.searchParams.set('coupon', 'HARAMAIN99');
+            }
 
             window.location.href = mayarRedirectUrl.toString();
         });
