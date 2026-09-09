@@ -28,7 +28,7 @@
 </head>
 <body class="bg-gray-100 antialiased min-h-screen flex items-center justify-center py-6 px-3.5 sm:px-6 md:px-8">
 
-    <div class="max-w-2xl w-full bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl border border-gray-200/80 text-center space-y-5 sm:space-y-6">
+    <div id="main-content" class="max-w-2xl w-full bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl border border-gray-200/80 text-center space-y-5 sm:space-y-6">
 
         <!-- Success Badge & Icon -->
         <div class="flex flex-col items-center justify-center space-y-2.5 pt-1">
@@ -42,8 +42,8 @@
             </span>
         </div>
 
-        <!-- Brand Logo (Positioned directly under "Pembayaran Berhasil!") -->
-        <div class="flex items-center justify-center space-x-2 pt-0.5">
+        <!-- Brand Logo (Located under Pembayaran Berhasil) -->
+        <div class="flex items-center justify-center space-x-2 pt-0.5 pb-1">
             <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-600 text-white font-black text-sm sm:text-base flex items-center justify-center shadow-md shadow-blue-500/20">
                 m
             </div>
@@ -86,19 +86,13 @@
             </p>
         </div>
 
-        <!-- Small Motivational Text (Formatted into 2 distinct lines) -->
-        <p class="text-xs sm:text-sm text-gray-500 italic font-medium leading-snug sm:leading-relaxed max-w-lg mx-auto pt-0.5">
-            "Semoga dari langkah beranimu hari ini,<br class="block">
-            bisa benar-benar menjadi bos atas masa depanmu!"
-        </p>
-
         <!-- Social Media Follow CTA Section -->
         <div class="pt-3.5 sm:pt-4 border-t border-gray-200/80 space-y-3">
             <p class="text-xs text-gray-600 font-medium leading-relaxed px-2">
                 Follow media sosial kami untuk update cara menjadi bos, tips, dan promo menarik lainnya:
             </p>
 
-            <!-- Compact Social Icons Only with Optimized Mobile Touch Targets -->
+            <!-- Compact Single-Color Social Icons -->
             <div class="flex justify-center items-center space-x-3 sm:space-x-4 pt-1">
                 <!-- Instagram -->
                 <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 active:scale-95 transition duration-200 shadow-sm">
@@ -130,12 +124,48 @@
             </div>
         </div>
 
-        <!-- Updated Customer Service Info -->
+        <!-- Customer Service Info -->
         <div class="text-[11px] sm:text-xs text-gray-400 pt-1">
             Ada pertanyaan? Hubungi Customer Service kami via WhatsApp di <a href="https://wa.me/6285169438438" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline font-semibold inline-block">085-169-438-438</a>
         </div>
 
     </div>
+
+    <!-- Automatic Access Control Protection Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            const invoiceId = urlParams.get('invoice_id');
+
+            // Cek jika halaman tidak membawa parameter status=paid / status=success / invoice_id
+            if (status !== 'paid' && status !== 'success' && !invoiceId) {
+                const mainContent = document.getElementById('main-content');
+                
+                // Tampilkan pesan penolakan
+                mainContent.innerHTML = `
+                    <div class="py-6 space-y-4">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900">Akses Ditolak</h2>
+                        <p class="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
+                            Halaman ini hanya dapat diakses setelah kamu menyelesaikan pembayaran resmi di checkout Mayar.
+                        </p>
+                        <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam 3 detik...</p>
+                    </div>
+                `;
+
+                // Redirect balik ke halaman checkout utama setelah 3 detik dengan fallback URL yang valid
+                setTimeout(function() {
+                    const fallbackUrl = window.location.origin ? window.location.origin + '/' : './index.html';
+                    window.location.href = fallbackUrl;
+                }, 3000);
+            }
+        });
+    </script>
 
 </body>
 </html>
