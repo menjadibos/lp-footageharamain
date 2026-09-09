@@ -154,7 +154,7 @@
                         <p class="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
                             Halaman ini hanya dapat diakses setelah kamu menyelesaikan pembayaran resmi di checkout Mayar.
                         </p>
-                        <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam 3 detik...</p>
+                        <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam 10 detik...</p>
                     </div>
                 `;
 
@@ -162,7 +162,7 @@
                 setTimeout(function() {
                     const fallbackUrl = window.location.origin ? window.location.origin + '/' : './index.html';
                     window.location.href = fallbackUrl;
-                }, 3000);
+                }, 10000);
             }
         });
     </script>
