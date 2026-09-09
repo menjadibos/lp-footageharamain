@@ -51,17 +51,18 @@
 
                 <!-- Main Product Detail Card -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
-                    <h1 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight text-center mb-5">
-                        200+ Footage Video Makkah dan Madinah
+                    <h1 class="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight text-center leading-snug mb-5">
+                        <span class="block">200+ Footage Video</span>
+                        <span class="block">Makkah dan Madinah</span>
                     </h1>
 
                     <!-- Product Hero Banner Image / Preview (Clean, No Overlay) -->
                     <div class="relative w-full rounded-xl overflow-hidden bg-gray-900 shadow-md mb-6 border border-gray-200 group">
                         <img 
-                            src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1000&auto=format&fit=crop" 
-                            alt="Footage Video Makkah dan Madinah"
+                            src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?q=80&w=1000&auto=format&fit=crop" 
+                            alt="Footage Video Madinah - Masjid Nabawi"
                             class="w-full h-52 md:h-64 object-cover object-center group-hover:scale-105 transition duration-500"
-                            onerror="this.src='https://placehold.co/600x350/0f172a/38bdf8?text=200%2B+Footage+Makkah+%26+Madinah'"
+                            onerror="this.src='https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1000&auto=format&fit=crop'"
                         >
                     </div>
 
@@ -136,16 +137,16 @@
                     <form id="buyer-form" class="space-y-4" onsubmit="event.preventDefault();">
                         <div>
                             <label class="block text-xs font-medium text-gray-700 mb-1">Nama Lengkap *</label>
-                            <input type="text" id="buyer-name" value="Abi" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="Masukkan nama lengkap">
+                            <input type="text" id="buyer-name" value="" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="Masukkan nama lengkap">
                         </div>
                         <div>
                             <label class="block text-xs font-medium text-gray-700 mb-1">No. WhatsApp *</label>
-                            <input type="tel" id="buyer-phone" value="08123456789" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="08123456789">
+                            <input type="tel" id="buyer-phone" value="" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="08123456789">
                             <p class="text-[11px] text-gray-400 mt-1">Awali dengan 0 atau kode negara tanpa tanda plus (contoh: 62).</p>
                         </div>
                         <div>
                             <label class="block text-xs font-medium text-gray-700 mb-1">Email *</label>
-                            <input type="email" id="buyer-email" value="email@kamu.com" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="email@kamu.com">
+                            <input type="email" id="buyer-email" value="" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="email@kamu.com">
                         </div>
                     </form>
                 </div>
@@ -323,14 +324,11 @@
 
                 <!-- Primary Call-To-Action Button -->
                 <div>
-                    <button id="submit-checkout-btn" class="pulse-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-4 px-6 rounded-2xl text-base shadow-lg shadow-blue-500/25 transition duration-200 flex items-center justify-center space-x-2">
+                    <button id="submit-checkout-btn" class="pulse-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-4 px-6 rounded-2xl text-base shadow-lg shadow-blue-500/25 transition duration-200 flex items-center justify-center">
                         <span>Pesan Sekarang</span>
-                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                        </svg>
                     </button>
                     <p class="text-center text-[11px] text-gray-400 mt-2.5">
-                        Pembayaran aman dan otomatis terhubung ke Mayar Checkout.
+                        Pembayaran aman dan pesanan langsung diproses.
                     </p>
                 </div>
 
@@ -435,11 +433,12 @@
 
         function setTimerExpiredState() {
             timerDisplay.textContent = "00:00";
-            // Make timer display bright white and clear when expired
-            timerDisplay.className = "text-3xl md:text-4xl font-black text-white tracking-widest font-mono drop-shadow-md";
-            timerLabel.className = "text-xs font-bold text-red-400 mb-2 uppercase tracking-wider";
-            timerLabel.textContent = "Promo telah berakhir";
-            timerCard.className = "bg-zinc-900 border-2 border-red-500/60 text-white rounded-2xl p-5 shadow-lg text-center transition-all duration-500";
+            // Clean white text with no outlines or drop shadows
+            timerDisplay.className = "text-3xl md:text-4xl font-black text-white tracking-widest font-mono";
+            timerLabel.className = "text-xs font-bold text-zinc-300 mb-2 uppercase tracking-wider";
+            timerLabel.textContent = "Harga promo telah berakhir";
+            // Muted grey shape with subtle faded opacity
+            timerCard.className = "bg-zinc-800/80 border border-zinc-700/60 text-white rounded-2xl p-5 shadow-sm text-center transition-all duration-500 opacity-75";
         }
 
         function startCountdown() {
