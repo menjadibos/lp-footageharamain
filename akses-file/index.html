@@ -142,27 +142,38 @@
             if (status !== 'paid' && status !== 'success' && !invoiceId) {
                 const mainContent = document.getElementById('main-content');
                 
-                // Tampilkan pesan penolakan
-                mainContent.innerHTML = `
-                    <div class="py-6 space-y-4">
-                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                            </svg>
+                if (mainContent) {
+                    // Tampilkan pesan penolakan dengan elemen span ber-id agar detiknya bisa di-update
+                    mainContent.innerHTML = `
+                        <div class="py-6 space-y-4">
+                            <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900">Akses Ditolak</h2>
+                            <p class="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
+                                Halaman ini hanya dapat diakses setelah kamu menyelesaikan pembayaran resmi di checkout Mayar.
+                            </p>
+                            <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam <span id="countdown-num">10</span> detik...</p>
                         </div>
-                        <h2 class="text-xl font-bold text-gray-900">Akses Ditolak</h2>
-                        <p class="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-                            Halaman ini hanya dapat diakses setelah kamu menyelesaikan pembayaran resmi di checkout Mayar.
-                        </p>
-                        <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam 10 detik...</p>
-                    </div>
-                `;
+                    `;
 
-                // Redirect balik ke halaman checkout utama setelah 10 detik dengan fallback URL yang valid
-                setTimeout(function() {
-                    const fallbackUrl = window.location.origin ? window.location.origin + '/' : './index.html';
-                    window.location.href = fallbackUrl;
-                }, 10000);
+                    let timeLeft = 10;
+                    const countdownSpan = document.getElementById('countdown-num');
+
+                    const timerInterval = setInterval(function() {
+                        timeLeft--;
+                        if (countdownSpan) {
+                            countdownSpan.textContent = timeLeft;
+                        }
+                        if (timeLeft <= 0) {
+                            clearInterval(timerInterval);
+                            const fallbackUrl = window.location.origin ? window.location.origin + '/' : './index.html';
+                            window.location.href = fallbackUrl;
+                        }
+                    }, 1000);
+                }
             }
         });
     </script>
