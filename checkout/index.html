@@ -46,8 +46,8 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-            <!-- LEFT COLUMN (Product Info, Price, Countdown) - Sticky Position -->
-            <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-6 lg:self-start">
+            <!-- LEFT COLUMN (Product Info, Price, Countdown) - Sticky Position & Exact Alignment -->
+            <div class="lg:col-span-5 space-y-5 lg:sticky lg:top-6 self-start">
 
                 <!-- Main Product Detail Card -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
@@ -56,80 +56,85 @@
                         <span class="block">Makkah dan Madinah</span>
                     </h1>
 
-                    <!-- Product Hero Banner Image / Preview (Clean, No Overlay) -->
-                    <div class="relative w-full rounded-xl overflow-hidden bg-gray-900 shadow-md mb-6 border border-gray-200 group">
+                    <!-- Product Hero Banner Image / Preview -->
+                    <div class="relative w-full rounded-xl overflow-hidden bg-gray-900 shadow-md mb-5 border border-gray-200 group">
                         <img 
                             src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?q=80&w=1000&auto=format&fit=crop" 
                             alt="Footage Video Madinah - Masjid Nabawi"
-                            class="w-full h-52 md:h-64 object-cover object-center group-hover:scale-105 transition duration-500"
+                            class="w-full h-48 md:h-56 object-cover object-center group-hover:scale-105 transition duration-500"
                             onerror="this.src='https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=1000&auto=format&fit=crop'"
                         >
                     </div>
 
                     <!-- Included Features List -->
                     <div class="bg-gray-50/80 rounded-xl p-4 border border-gray-200/80">
-                        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-3">Yang Kamu Dapat</div>
+                        <div class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2.5">Yang Kamu Dapat</div>
                         <ul class="divide-y divide-gray-200/60 text-xs md:text-sm text-gray-700">
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-1 rounded text-xs text-center mr-3">200+</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">footage video asli Makkah &amp; Madinah</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-0.5 rounded text-[11px] text-center mr-3">200+</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">footage video asli Makkah &amp; Madinah</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-1 rounded text-xs text-center mr-3">100%</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">Dokumentasi Sendiri</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-0.5 rounded text-[11px] text-center mr-3">100%</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">Dokumentasi Sendiri</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-1 rounded text-xs text-center mr-3">1080p</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">Kualitas Full HD</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-0.5 rounded text-[11px] text-center mr-3">1080p</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">Kualitas Full HD</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-1 rounded text-xs text-center mr-3">MOV</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">Format Mentahan</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 font-bold text-blue-600 bg-blue-100/70 py-0.5 rounded text-[11px] text-center mr-3">MOV</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">Format Mentahan</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 flex justify-center items-center font-bold text-blue-600 text-sm mr-3">✓</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">No Monthly Subscription</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 flex justify-center items-center font-bold text-blue-600 text-xs mr-3">✓</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">No Monthly Subscription</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 flex justify-center items-center font-bold text-blue-600 text-sm mr-3">✓</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">Lifetime Access</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 flex justify-center items-center font-bold text-blue-600 text-xs mr-3">✓</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">Lifetime Access</span>
                             </li>
-                            <li class="flex items-center py-2.5">
-                                <span class="w-16 shrink-0 flex justify-center items-center font-bold text-blue-600 text-sm mr-3">✓</span>
-                                <span class="flex-1 font-medium text-gray-800 text-xs md:text-sm leading-snug">Commercial Use Allowed</span>
+                            <li class="flex items-center py-2">
+                                <span class="w-14 shrink-0 flex justify-center items-center font-bold text-blue-600 text-xs mr-3">✓</span>
+                                <span class="flex-1 font-medium text-gray-800 text-xs leading-snug">Commercial Use Allowed</span>
                             </li>
                         </ul>
-                        <div class="mt-3 pt-3 border-t border-gray-200/80 flex justify-between items-center text-xs text-gray-500 font-semibold">
+                        <div class="mt-2.5 pt-2.5 border-t border-gray-200/80 flex justify-between items-center text-xs text-gray-500 font-semibold">
                             <span>Total value</span>
                             <span class="line-through font-bold text-gray-500 text-xs">Rp 28.000.000</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pricing Details Card -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 text-center space-y-2">
-                    <div class="text-[11px] font-semibold text-gray-400 uppercase tracking-wide">Harga Normal</div>
-                    <div class="text-gray-400 line-through text-base font-bold">Rp 599.000</div>
-                    <div class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">Rp 99.000</div>
-                    <div class="pt-1">
-                        <span class="inline-block bg-blue-100/80 text-blue-600 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                            HEMAT Rp 500.000
-                        </span>
+                <!-- Integrated Promo Pricing & Countdown Card -->
+                <div id="countdown-card" class="bg-white rounded-2xl p-5 shadow-sm border border-gray-200 space-y-4 text-center transition-all duration-500">
+                    <div>
+                        <div class="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">
+                            Harga Normal <span class="line-through text-gray-400 font-bold ml-1">Rp 599.000</span>
+                        </div>
+                        <div class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-1">
+                            Rp 99.000
+                        </div>
+                        <div>
+                            <span class="inline-block bg-blue-100/80 text-blue-600 text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
+                                HEMAT Rp 500.000
+                            </span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Dark Countdown Timer Card -->
-                <div id="countdown-card" class="bg-[#18181b] text-white rounded-2xl p-5 shadow-sm border border-zinc-800 text-center transition-all duration-500">
-                    <div id="countdown-label" class="text-xs font-medium text-zinc-400 mb-2 transition-colors duration-500">Harga promo berakhir dalam</div>
-                    <div id="countdown-timer" class="text-3xl md:text-4xl font-black text-white tracking-widest font-mono transition-colors duration-500">
-                        04:34
+                    <!-- Inner Dark Timer Box -->
+                    <div class="bg-[#18181b] text-white rounded-xl p-3.5 text-center">
+                        <div id="countdown-label" class="text-xs font-medium text-zinc-400 mb-1 transition-colors duration-500">Harga promo berakhir dalam</div>
+                        <div id="countdown-timer" class="text-2xl md:text-3xl font-black text-white tracking-widest font-mono transition-colors duration-500">
+                            04:34
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- RIGHT COLUMN (Checkout Form, Payment Method, Coupon, Summary) -->
-            <div class="lg:col-span-7 space-y-6">
+            <!-- RIGHT COLUMN (Checkout Form, Streamlined Payment Method, Coupon, Summary & CTA) -->
+            <div class="lg:col-span-7 space-y-5 self-start">
 
                 <!-- Buyer Data Card -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
@@ -142,7 +147,7 @@
                         <div>
                             <label class="block text-xs font-medium text-gray-700 mb-1">No. WhatsApp *</label>
                             <input type="tel" id="buyer-phone" value="" required class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition outline-none" placeholder="08123456789">
-                            <p class="text-[11px] text-gray-400 mt-1">Awali dengan 0 atau kode negara tanpa tanda plus (contoh: 62).</p>
+                            <p class="text-[11px] text-gray-400 mt-1">Awali dengan 0 atau kode negara 62 (contoh: 08123456789).</p>
                         </div>
                         <div>
                             <label class="block text-xs font-medium text-gray-700 mb-1">Email *</label>
@@ -151,133 +156,69 @@
                     </form>
                 </div>
 
-                <!-- Payment Method Card -->
+                <!-- Streamlined Payment Method Card -->
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
-                    <h2 class="text-base font-bold text-gray-900 mb-4">Metode Pembayaran</h2>
-                    <div class="space-y-3" id="payment-methods-list">
-
-                        <!-- QRIS Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border-2 border-blue-500 bg-blue-50/20 rounded-xl cursor-pointer transition" data-method="qris">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="QRIS" checked class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 8H28V12H16V20H28V24H12V8Z" fill="#ED1C24"/>
-                                        <path d="M20 20H28V32H24V24H20V20Z" fill="#ED1C24"/>
-                                        <path d="M34 8H40V32H34V8Z" fill="#231F20"/>
-                                        <path d="M46 8H58C62.4 8 66 11.6 66 16C66 19.3 64 22.1 61 23.3L67 32H60L55 24H52V32H46V8ZM52 13V19H58C59.7 19 61 17.7 61 16C61 14.3 59.7 13 58 13H52Z" fill="#231F20"/>
-                                        <path d="M72 8H78V32H72V8Z" fill="#ED1C24"/>
-                                        <path d="M84 26C84 29.3 86.7 32 90 32C93.3 32 96 29.3 96 26V22H84V18H102V26C102 32.6 96.6 38 90 38C83.4 38 78 32.6 78 26V8H84V26Z" fill="#ED1C24"/>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">QRIS</span>
+                    <h2 class="text-base font-bold text-gray-900 mb-3">Metode Pembayaran</h2>
+                    
+                    <!-- Unified Payment Selection Card -->
+                    <div class="border-2 border-blue-500 bg-blue-50/30 rounded-xl p-4 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="flex h-3 w-3 relative">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                                </span>
+                                <span class="text-xs font-bold text-gray-900">Pembayaran Instan &amp; Otomatis</span>
                             </div>
-                        </label>
+                            <span class="text-[10px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full uppercase">Aktif</span>
+                        </div>
 
-                        <!-- GoPay Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="gopay">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="GoPay" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="30" rx="4" fill="#00A5CF"/>
-                                        <circle cx="20" cy="15" r="7" fill="white"/>
-                                        <circle cx="20" cy="15" r="3.5" fill="#00A5CF"/>
-                                        <text x="34" y="20" font-family="'Inter', sans-serif" font-weight="800" font-size="14" fill="white">gopay</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">GoPay</span>
+                        <p class="text-xs text-gray-600 mb-3 leading-relaxed">
+                            Mendukung QRIS, E-Wallet, dan Virtual Account Bank. Pilihan metode pembayaran akhir dapat Kamu pilih langsung di halaman tagihan.
+                        </p>
+
+                        <!-- Available Payment Method Badges -->
+                        <div class="flex flex-wrap gap-1.5 pt-2 border-t border-blue-100">
+                            <!-- QRIS -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <svg class="h-3.5 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8H28V12H16V20H28V24H12V8Z" fill="#ED1C24"/>
+                                    <path d="M20 20H28V32H24V24H20V20Z" fill="#ED1C24"/>
+                                    <path d="M34 8H40V32H34V8Z" fill="#231F20"/>
+                                    <path d="M46 8H58C62.4 8 66 11.6 66 16C66 19.3 64 22.1 61 23.3L67 32H60L55 24H52V32H46V8ZM52 13V19H58C59.7 19 61 17.7 61 16C61 14.3 59.7 13 58 13H52Z" fill="#231F20"/>
+                                    <path d="M72 8H78V32H72V8Z" fill="#ED1C24"/>
+                                    <path d="M84 26C84 29.3 86.7 32 90 32C93.3 32 96 29.3 96 26V22H84V18H102V26C102 32.6 96.6 38 90 38C83.4 38 78 32.6 78 26V8H84V26Z" fill="#ED1C24"/>
+                                </svg>
                             </div>
-                        </label>
-
-                        <!-- DANA Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="dana">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="DANA" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="30" rx="4" fill="#108EE9"/>
-                                        <text x="50" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="white" text-anchor="middle" letter-spacing="1">DANA</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">DANA</span>
+                            <!-- GoPay -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-extrabold text-[#00A5CF]">gopay</span>
                             </div>
-                        </label>
-
-                        <!-- ShopeePay Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="shopeepay">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="ShopeePay" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="110" height="32" rx="4" fill="#EE4D2D"/>
-                                        <path d="M16 8C14.3 8 13 9.3 13 11V13H23V11C23 9.3 21.7 8 20 8H16ZM11 13V24C11 25.1 11.9 26 13 26H23C24.1 26 25 25.1 25 24V13H11Z" fill="white"/>
-                                        <text x="32" y="21" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="white">ShopeePay</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">ShopeePay</span>
+                            <!-- DANA -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-extrabold text-[#108EE9]">DANA</span>
                             </div>
-                        </label>
-
-                        <!-- BSI Virtual Account Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="bsi_va">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="BSI Virtual Account" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="90" height="30" rx="4" fill="#00A39D"/>
-                                        <circle cx="20" cy="15" r="6" fill="#F4A261"/>
-                                        <text x="32" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="15" fill="white">BSI</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">BSI Virtual Account</span>
+                            <!-- ShopeePay -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-extrabold text-[#EE4D2D]">ShopeePay</span>
                             </div>
-                        </label>
-
-                        <!-- BNI Virtual Account Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="bni_va">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="BNI Virtual Account" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="90" height="30" rx="4" fill="#005E6A"/>
-                                        <text x="12" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="#F26522">BNI</text>
-                                        <text x="50" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="white">46</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">BNI Virtual Account</span>
+                            <!-- BSI -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-black text-[#00A39D]">BSI</span>
                             </div>
-                        </label>
-
-                        <!-- BRI Virtual Account Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="bri_va">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="BRI Virtual Account" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="90" height="30" rx="4" fill="#00529C"/>
-                                        <text x="45" y="21" font-family="'Inter', sans-serif" font-weight="900" font-size="16" fill="white" text-anchor="middle" letter-spacing="1">BRI</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">BRI Virtual Account</span>
+                            <!-- BNI -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-black text-[#F26522]">BNI</span>
                             </div>
-                        </label>
-
-                        <!-- Mandiri Virtual Account Option -->
-                        <label class="payment-option flex items-center justify-between p-3.5 border border-gray-200 rounded-xl cursor-pointer hover:border-gray-300 transition" data-method="mandiri_va">
-                            <div class="flex items-center space-x-3">
-                                <input type="radio" name="payment_method" value="Bank Mandiri Virtual Account" class="w-4 h-4 text-blue-600 focus:ring-blue-500 border-gray-300">
-                                <div class="bg-white p-1 rounded border border-gray-200 flex items-center justify-center h-8 w-14 shadow-sm">
-                                    <svg class="h-5 w-auto" viewBox="0 0 100 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="100" height="30" rx="4" fill="#003D79"/>
-                                        <path d="M70 8C75 8 82 11 88 15C82 19 75 22 70 22C72 18 72 12 70 8Z" fill="#FFC72C"/>
-                                        <text x="10" y="20" font-family="'Inter', sans-serif" font-weight="800" font-size="12" fill="white">mandırı</text>
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-bold text-gray-800">Bank Mandiri Virtual Account</span>
+                            <!-- BRI -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-black text-[#00529C]">BRI</span>
                             </div>
-                        </label>
-
+                            <!-- Mandiri -->
+                            <div class="bg-white px-2 py-0.5 rounded border border-gray-200 flex items-center shadow-2xs h-6">
+                                <span class="text-[10px] font-extrabold text-[#003D79]">Mandiri</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -297,12 +238,12 @@
                         </svg>
                         <span>Kupon aktif. Potongan Rp 500.000</span>
                     </div>
-                    <p class="text-[11px] text-gray-400 mt-1">Contoh kode: <strong class="text-blue-600 cursor-pointer" onclick="document.getElementById('coupon-input').value='HARAMAIN99'">HARAMAIN99</strong></p>
+                    <p class="text-[11px] text-gray-400 mt-1">Kode kupon: <strong class="text-blue-600 cursor-pointer" onclick="document.getElementById('coupon-input').value='HARAMAIN99'">HARAMAIN99</strong></p>
                 </div>
 
-                <!-- Order Summary Card -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-3">
-                    <h2 class="text-base font-bold text-gray-900 mb-4">Ringkasan</h2>
+                <!-- Order Summary & Primary CTA Combined Card -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-4">
+                    <h2 class="text-base font-bold text-gray-900 mb-2">Ringkasan</h2>
 
                     <div class="flex justify-between items-start gap-3 text-xs text-gray-600">
                         <span class="font-medium text-gray-700 leading-snug">200+ Footage Video Makkah dan Madinah</span>
@@ -310,26 +251,26 @@
                     </div>
 
                     <div class="flex justify-between items-center gap-3 text-xs text-emerald-600" id="summary-discount-row">
-                        <span>Diskon</span>
+                        <span>Diskon (HARAMAIN99)</span>
                         <span class="font-semibold shrink-0 text-right" id="summary-discount-val">- Rp 500.000</span>
                     </div>
 
                     <hr class="border-gray-200 my-2">
 
-                    <div class="flex justify-between items-center gap-3">
-                        <span class="text-sm font-bold text-gray-900">Total</span>
-                        <span class="text-lg font-extrabold text-gray-900 tracking-tight shrink-0 text-right" id="summary-total-val">Rp 99.000</span>
+                    <div class="flex justify-between items-center gap-3 pb-2">
+                        <span class="text-sm font-bold text-gray-900">Total Pembayaran</span>
+                        <span class="text-xl font-extrabold text-gray-900 tracking-tight shrink-0 text-right" id="summary-total-val">Rp 99.000</span>
                     </div>
-                </div>
 
-                <!-- Primary Call-To-Action Button -->
-                <div>
-                    <button id="submit-checkout-btn" class="pulse-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-4 px-6 rounded-2xl text-base shadow-lg shadow-blue-500/25 transition duration-200 flex items-center justify-center">
-                        <span>Pesan Sekarang</span>
-                    </button>
-                    <p class="text-center text-[11px] text-gray-400 mt-2.5">
-                        Pembayaran aman dan pesanan langsung diproses.
-                    </p>
+                    <!-- Primary Call-To-Action Button inside the summary box -->
+                    <div>
+                        <button id="submit-checkout-btn" class="pulse-btn w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-3.5 px-6 rounded-xl text-base shadow-lg shadow-blue-500/25 transition duration-200 flex items-center justify-center">
+                            <span>Pesan Sekarang</span>
+                        </button>
+                        <p class="text-center text-[11px] text-gray-400 mt-2">
+                            Pembayaran aman &amp; pesanan otomatis diproses.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -338,22 +279,15 @@
     </div>
 
     <script>
-        /* Mayar Product Checkout & API Configuration */
+        /* Mayar Product Checkout & Cloudflare Worker API Configuration */
         const MAYAR_PRODUCT_URL = "https://kelasmenjadibos.myr.id/pl/200-footage-video-mentahan-makkah-dan-madinah";
-        
-        /* 
-           INTEGRASI CLOUDFLARE WORKER (SUPER AMAN & DIRECT INVOICE):
-           URL Cloudflare Worker Aktif milik Kamu
-        */
         const CLOUDFLARE_WORKER_URL = "https://mayar-checkout.halomenjadibos.workers.dev/";
 
         /* State Variables */
         const BASE_PRICE = 599000;
-        let discountAmount = 500000; // default for HARAMAIN99
-        let selectedPaymentName = "QRIS";
+        let discountAmount = 500000; // Default discount for HARAMAIN99
 
         /* DOM Elements */
-        const paymentOptions = document.querySelectorAll('.payment-option');
         const couponInput = document.getElementById('coupon-input');
         const applyCouponBtn = document.getElementById('apply-coupon-btn');
         const couponStatus = document.getElementById('coupon-status');
@@ -366,21 +300,6 @@
         /* Helper: Format Number to IDR Currency */
         function formatIDR(amount) {
             return 'Rp ' + amount.toLocaleString('id-ID');
-        }
-
-        /* Map UI Payment Name to Mayar API Payment Method Code */
-        function getMayarPaymentCode(paymentName) {
-            const map = {
-                'QRIS': 'qris',
-                'GoPay': 'gopay',
-                'DANA': 'dana',
-                'ShopeePay': 'shopeepay',
-                'BSI Virtual Account': 'bsi_va',
-                'BNI Virtual Account': 'bni_va',
-                'BRI Virtual Account': 'bri_va',
-                'Bank Mandiri Virtual Account': 'mandiri_va'
-            };
-            return map[paymentName] || 'qris';
         }
 
         /* Recalculate Totals */
@@ -396,29 +315,6 @@
 
             summaryTotalVal.textContent = formatIDR(total);
         }
-
-        /* Payment Method Radio Selection */
-        paymentOptions.forEach(option => {
-            option.addEventListener('click', () => {
-                paymentOptions.forEach(opt => {
-                    opt.classList.remove('border-2', 'border-blue-500', 'bg-blue-50/20');
-                    opt.classList.add('border', 'border-gray-200');
-                    const radio = opt.querySelector('input[type="radio"]');
-                    if (radio) radio.checked = false;
-                });
-
-                option.classList.remove('border', 'border-gray-200');
-                option.classList.add('border-2', 'border-blue-500', 'bg-blue-50/20');
-                
-                const currentRadio = option.querySelector('input[type="radio"]');
-                if (currentRadio) {
-                    currentRadio.checked = true;
-                    selectedPaymentName = currentRadio.value;
-                }
-
-                updateSummary();
-            });
-        });
 
         /* Coupon Handler */
         applyCouponBtn.addEventListener('click', () => {
@@ -455,7 +351,7 @@
             timerDisplay.className = "text-3xl md:text-4xl font-black text-white tracking-widest font-mono";
             timerLabel.className = "text-xs font-bold text-zinc-300 mb-2 uppercase tracking-wider";
             timerLabel.textContent = "Harga promo telah berakhir";
-            timerCard.className = "bg-zinc-800/80 border border-zinc-700/60 text-white rounded-2xl p-5 shadow-sm text-center transition-all duration-500 opacity-75";
+            timerCard.className = "bg-zinc-800/80 border border-zinc-700/60 text-white rounded-2xl p-6 shadow-sm text-center transition-all duration-500 opacity-75";
         }
 
         function startCountdown() {
@@ -473,7 +369,7 @@
             }, 1000);
         }
 
-        /* Form Submit: Secure Cloudflare Worker Direct Invoice Request */
+        /* Form Submit: Direct Invoice Request via Cloudflare Worker */
         submitBtn.addEventListener('click', async () => {
             const name = document.getElementById('buyer-name').value.trim();
             let phone = document.getElementById('buyer-phone').value.trim();
@@ -493,54 +389,49 @@
             }
 
             const finalAmount = BASE_PRICE - discountAmount;
-            const paymentCode = getMayarPaymentCode(selectedPaymentName);
 
-            // Jika Cloudflare Worker URL dikonfigurasi
-            if (CLOUDFLARE_WORKER_URL && CLOUDFLARE_WORKER_URL !== "PASTE_URL_CLOUDFLARE_WORKER_DISINI") {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = `
-                    <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <span>Menyiapkan Tagihan Pembayaran...</span>
-                `;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Menyiapkan Tagihan Pembayaran...</span>
+            `;
 
-                try {
-                    const response = await fetch(CLOUDFLARE_WORKER_URL, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            name: name,
-                            email: email,
-                            mobile: phone,
-                            amount: finalAmount,
-                            paymentMethod: paymentCode,
-                            redirectUrl: MAYAR_PRODUCT_URL
-                        })
-                    });
+            try {
+                const response = await fetch(CLOUDFLARE_WORKER_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        mobile: phone,
+                        amount: finalAmount,
+                        redirectUrl: MAYAR_PRODUCT_URL
+                    })
+                });
 
-                    const data = await response.json();
-                    
-                    // Ambil URL Tagihan Mayar
-                    const invoiceUrl = data?.data?.link || data?.data?.paymentUrl || (Array.isArray(data?.data) ? data?.data[0]?.link : null);
+                const data = await response.json();
+                
+                // Ambil URL Tagihan Mayar
+                const invoiceUrl = data?.data?.link || data?.data?.paymentUrl || (Array.isArray(data?.data) ? data?.data[0]?.link : null);
 
-                    if (invoiceUrl) {
-                        // Direct pembeli langsung ke halaman tagihan aktif Mayar!
-                        window.location.href = invoiceUrl;
-                        return;
-                    } else if (data?.error || data?.messages) {
-                        alert("Peringatan Mayar API: " + (data.error || data.messages));
-                    }
-                } catch (error) {
-                    console.error("Worker Integration Error:", error);
-                    alert("Koneksi ke Worker terputus (" + error.message + "). Mengalihkan ke checkout Mayar...");
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = "Pesan Sekarang";
+                if (invoiceUrl) {
+                    // Direct pembeli langsung ke halaman tagihan aktif Mayar!
+                    window.location.href = invoiceUrl;
+                    return;
+                } else if (data?.error || data?.messages) {
+                    alert("Peringatan Mayar API: " + (data.error || data.messages));
                 }
+            } catch (error) {
+                console.error("Worker Integration Error:", error);
+                alert("Gagal terhubung ke Cloudflare Worker (" + error.message + "). Mengalihkan ke halaman checkout...");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "<span>Pesan Sekarang</span>";
             }
 
             // Fallback Redirect Auto-Fill
