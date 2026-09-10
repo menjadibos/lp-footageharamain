@@ -45,7 +45,7 @@
         <!-- Brand Logo (Located under Pembayaran Berhasil) -->
         <div class="flex items-center justify-center space-x-2 pt-0.5 pb-1">
             <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-500/20 overflow-hidden p-1">
-                <img src="images/logo-menjadibos.svg" alt="Logo" class="w-full h-full object-contain filter brightness-0 invert" onerror="this.onerror=null; this.src='https://placehold.co/32x32/2563eb/ffffff?text=M';">
+                <img src="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/logo.svg" alt="Logo" class="w-full h-full object-contain filter brightness-0 invert" onerror="this.onerror=null; this.src='https://placehold.co/32x32/2563eb/ffffff?text=M';">
             </div>
             <span class="text-lg sm:text-xl font-black text-gray-900 tracking-tight">menjadibos<span class="text-blue-600">.</span></span>
         </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <a href="https://drive.google.com/drive/folders/1gTFaSbVaDXXC7T68ks_o70HQBoXOCyhk?usp=sharing" target="_blank" rel="noopener noreferrer" class="pulse-subtle w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-3.5 px-4 rounded-xl text-xs sm:text-sm shadow-md shadow-blue-500/20 transition duration-200 flex items-center justify-center space-x-2 text-center">
+            <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="pulse-subtle w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold py-3.5 px-4 rounded-xl text-xs sm:text-sm shadow-md shadow-blue-500/20 transition duration-200 flex items-center justify-center space-x-2 text-center">
                 <span>Buka Link Download Google Drive</span>
                 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -130,53 +130,6 @@
         </div>
 
     </div>
-
-    <!-- Automatic Access Control Protection Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const status = urlParams.get('status');
-            const invoiceId = urlParams.get('invoice_id');
-
-            // Cek jika halaman tidak membawa parameter status=paid / status=success / invoice_id
-            if (status !== 'paid' && status !== 'success' && !invoiceId) {
-                const mainContent = document.getElementById('main-content');
-                
-                if (mainContent) {
-                    // Tampilkan pesan penolakan dengan elemen span ber-id agar detiknya bisa di-update
-                    mainContent.innerHTML = `
-                        <div class="py-6 space-y-4">
-                            <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center mx-auto shadow-inner">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-xl font-bold text-gray-900">Akses Ditolak</h2>
-                            <p class="text-xs sm:text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
-                                Halaman ini hanya dapat diakses setelah kamu menyelesaikan pembayaran resmi di checkout Mayar.
-                            </p>
-                            <p class="text-[11px] text-gray-400">Mengalihkan kamu kembali ke halaman checkout dalam <span id="countdown-num">10</span> detik...</p>
-                        </div>
-                    `;
-
-                    let timeLeft = 10;
-                    const countdownSpan = document.getElementById('countdown-num');
-
-                    const timerInterval = setInterval(function() {
-                        timeLeft--;
-                        if (countdownSpan) {
-                            countdownSpan.textContent = timeLeft;
-                        }
-                        if (timeLeft <= 0) {
-                            clearInterval(timerInterval);
-                            const fallbackUrl = window.location.origin ? window.location.origin + '/' : './index.html';
-                            window.location.href = 'https://haramain.menjadibos.com/checkout/';
-                        }
-                    }, 1000);
-                }
-            }
-        });
-    </script>
 
 </body>
 </html>
