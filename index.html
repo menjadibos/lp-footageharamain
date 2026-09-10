@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>200+ Video Makkah & Madinah Full HD - Akses Lisensi Selamanya</title>
 
-  <!-- Favicon dari Folder images -->
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="images/Logo-MenjadiBos.png">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -83,16 +82,24 @@
       </span>
       <span class="text-[11px] sm:text-xs">Diskon Spesial 200+ Video berakhir dalam:</span>
       <span id="top-timer" class="font-mono font-bold text-[#18181b] bg-zinc-100 px-2 py-0.5 rounded border border-zinc-300 text-[11px] sm:text-xs">02:45:19</span>
-      <a href="#harga" class="text-[#4361ee] font-semibold underline underline-offset-2 hover:text-[#3752db] transition-colors ml-1 text-[11px] sm:text-xs">Ambil Diskon 99K &rarr;</a>
+      <a href="#harga" class="text-[#4361ee] font-semibold underline underline-offset-2 hover:text-[#3752db] transition-colors ml-1 text-[11px] sm:text-xs">Ambil Promo 99K &rarr;</a>
     </div>
   </aside>
 
   <!-- 1. HOOK / HERO UTAMA -->
-  <section class="relative pt-12 pb-16 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 overflow-hidden">
+  <section class="relative pt-12 pb-16 sm:pt-16 sm:pb-20 md:pt-24 md:pb-28 overflow-hidden">
     <!-- Ambient Glow Aksen Biru Halus -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] md:w-[700px] h-[300px] sm:h-[360px] bg-gradient-to-b from-[#4361ee]/10 via-[#eef2ff]/40 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Pill Badge Kategori -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-zinc-200 shadow-sm text-zinc-700 text-xs font-medium mb-6 sm:mb-8 hover:border-zinc-300 transition-all">
+        <span class="w-2 h-2 rounded-full bg-[#4361ee]"></span>
+        <span class="text-[#18181b] font-semibold">200+ Video Makkah & Madinah Full HD</span>
+        <span class="text-zinc-300">|</span>
+        <span class="text-zinc-500">100% Dokumentasi Asli</span>
+      </div>
 
       <!-- Headline -->
       <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gradient-dark leading-[1.18] sm:leading-[1.15] mb-5 sm:mb-6">
@@ -105,9 +112,9 @@
         Koleksi <strong>200+ Video Asli Makkah & Madinah Kualitas Full HD</strong>. Sekali bayar, bebas gunakan selamanya tanpa takut kena copyright!
       </p>
 
-      <!-- Tombol CTA Hero (Langsung ke Payment Gateway) -->
+      <!-- Tombol CTA Hero (Tanpa tulisan — Rp 99.000) -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-10 sm:mb-14 px-4 sm:px-0">
-        <a href="#harga" class="btn-direct-checkout w-full sm:w-auto px-8 py-4 rounded-full bg-[#18181b] hover:bg-[#4361ee] active:bg-[#3752db] text-white font-semibold text-sm sm:text-base shadow-lg shadow-zinc-900/10 hover:shadow-[#4361ee]/30 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] flex items-center justify-center gap-2.5">
+        <a href="#harga" class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#18181b] hover:bg-[#4361ee] active:bg-[#3752db] text-white font-semibold text-sm sm:text-base shadow-lg shadow-zinc-900/10 hover:shadow-[#4361ee]/30 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-[0.98] flex items-center justify-center gap-2.5">
           <span>AMBIL AKSES VIDEO SEKARANG</span>
           <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
         </a>
@@ -117,7 +124,7 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 py-4 sm:py-5 max-w-4xl mx-auto border-y border-zinc-200/80 text-[11px] sm:text-xs font-medium text-zinc-600 text-left sm:text-center">
         <div class="flex items-center justify-start sm:justify-center gap-2">
           <i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i>
-          <span>Resolusi Full HD (1080p)</span>
+          <span>Resolusi Ultra HD (1080p)</span>
         </div>
         <div class="flex items-center justify-start sm:justify-center gap-2">
           <i class="fa-solid fa-circle-check text-emerald-500 shrink-0"></i>
@@ -133,17 +140,17 @@
         </div>
       </div>
 
-      <!-- YOUTUBE VIDEO EMBED (SHORTS PROPORSIONAL & PAS DI LAYAR) -->
-      <div class="mt-8 sm:mt-12 max-w-[260px] sm:max-w-[290px] mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-[9/16] bg-black border-4 border-zinc-800">
-  <video 
-    class="w-full h-full object-cover" 
-    src="images/preview-footage.mov" 
-    autoplay 
-    loop 
-    muted 
-    playsinline>
-  </video>
-</div>
+      <!-- VIDEO PREVIEW SHORTS (NATIVE HTML5 VIDEO) -->
+      <div class="mt-8 sm:mt-10 max-w-[260px] sm:max-w-[290px] mx-auto rounded-2xl overflow-hidden shadow-2xl aspect-[9/16] bg-black border-4 border-zinc-800">
+        <video 
+          class="w-full h-full object-cover" 
+          src="images/preview=footage.mov" 
+          controls 
+          playsinline 
+          preload="metadata">
+          Browser Anda tidak mendukung pemutar video.
+        </video>
+      </div>
 
     </div>
   </section>
@@ -167,16 +174,15 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 border border-zinc-200 shadow-sm hover:shadow-framer-hover transition-all flex flex-col justify-between">
         <div>
           <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#eef2ff] text-[#4361ee] flex items-center justify-center text-lg sm:text-xl mb-5 sm:mb-6 border border-[#4361ee]/20">
-            <i class="fa-solid fa-kaaba"></i>
+            <i class="fa-solid fa-laptop-file"></i>
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-[#18181b] mb-2 sm:mb-3">200+ Video Eksklusif</h3>
           <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-            Mengcover sudut-sudut paling syahdu di <strong>Masjidil Haram, Ka'bah, Masjid Nabawi</strong>, momen tawaf, waktu senja pelataran, hingga suasana sudut kota Makkah & Madinah dengan komposisi estetik dan cinematic.
+            Mengcover sudut-sudut paling syahdu di <strong>Masjidil Haram, Ka'bah, Masjid Nabawi</strong>, suasana sudut kota Makkah & Madinah dengan komposisi estetik.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-zinc-100 text-xs font-mono text-zinc-500 flex items-start gap-2">
-          <i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i>
-          <span class="leading-snug">Lengkap Sudut Landscape (16:9) & Portrait (9:16)</span>
+        <div class="mt-6 pt-4 border-t border-zinc-100 text-xs font-mono text-zinc-500 flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-emerald-500"></i> Lengkap Sudut Landscape (16:9) & Portrait (9:16)
         </div>
       </div>
 
@@ -188,12 +194,11 @@
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-[#18181b] mb-2 sm:mb-3">Siap Pakai untuk Segala Jenis Konten</h3>
           <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-            Sangat cocok buat <strong>Instagram Reels, TikTok, YouTube Shorts</strong>, video promosi paket travel Umroh/Haji, video quote islami harian, opening podcast kajian, hingga latar belakang video sholawat menenangan.
+            Sangat cocok buat <strong>Instagram Reels, TikTok, YouTube Shorts</strong>, video promosi paket travel Umroh/Haji, video quote islami harian, opening podcast kajian, hingga latar belakang video sholawat menenangkan.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-zinc-100 text-xs font-mono text-zinc-500 flex items-start gap-2">
-          <i class="fa-solid fa-circle-check text-emerald-500 shrink-0 mt-0.5"></i>
-          <span class="leading-snug">Kompatibel CapCut, VN, Premiere Pro, Canva</span>
+        <div class="mt-6 pt-4 border-t border-zinc-100 text-xs font-mono text-zinc-500 flex items-center gap-2">
+          <i class="fa-solid fa-circle-check text-emerald-500"></i> Kompatibel CapCut, VN, Premiere Pro, Canva
         </div>
       </div>
     </div>
@@ -225,7 +230,7 @@
             </div>
             <h3 class="text-sm sm:text-base font-bold text-[#18181b] mb-2">Resolusi Full HD (1080p)</h3>
             <p class="text-xs text-zinc-600 leading-relaxed">
-              Gambar sangat tajam, jernih, dan tidak pecah saat diunggah ke platform media sosial mana pun seperti Instagram & TikTok.
+              Gambar tajam, jernih, dan tidak pecah saat diunggah ke platform media sosial seperti Instagram & TikTok.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-zinc-200/50 text-[11px] font-mono text-emerald-600 font-semibold">
@@ -255,9 +260,9 @@
             <div class="w-10 h-10 rounded-xl bg-white text-[#18181b] flex items-center justify-center text-base mb-4 border border-zinc-200 shadow-sm">
               <i class="fa-solid fa-sliders"></i>
             </div>
-            <h3 class="text-sm sm:text-base font-bold text-[#18181b] mb-2">Format Mentahan (Raw Video)</h3>
+            <h3 class="text-sm sm:text-base font-bold text-[#18181b] mb-2">Format Mentahan (MOV Video)</h3>
             <p class="text-xs text-zinc-600 leading-relaxed">
-              Bebas kamu edit, berikan color grading, tambahkan audio sholawat, teks doa, atau narasi voiceover sesuka hati kamu.
+              Bebas kamu edit, berikan color grading, tambahkan audio murotal quran, teks doa, atau narasi voiceover sesuka hati kamu.
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-zinc-200/50 text-[11px] font-mono text-emerald-600 font-semibold">
@@ -320,7 +325,7 @@
     </div>
   </section>
 
-  <!-- 5. NILAI TAMBAH / VALUE REINFORCEMENT -->
+  <!-- 5. NILAI TAMBAH / VALUE REINFORCEMENT (RAPI & SEDERHANA DI MOBILE) -->
   <section class="py-16 sm:py-20 md:py-24 max-w-5xl mx-auto px-4 sm:px-6">
     <div class="bg-white rounded-3xl p-6 sm:p-10 md:p-12 border border-zinc-200 shadow-framer relative overflow-hidden">
       
@@ -340,7 +345,7 @@
           </p>
         </div>
 
-        <!-- Perbandingan Biaya -->
+        <!-- Perbandingan Biaya (Ringkas & Tidak Berantakan di Mobile) -->
         <div class="bg-zinc-50 rounded-2xl p-5 sm:p-6 border border-zinc-200 space-y-3.5 text-xs sm:text-sm">
           <div class="flex items-center justify-between gap-3 pb-3 border-b border-zinc-200/80 text-zinc-600">
             <span>Tiket & Visa Umroh:</span>
@@ -364,12 +369,12 @@
     </div>
   </section>
 
-  <!-- 6. TESTIMONI -->
+  <!-- 6. TESTIMONI (TAMPILAN DISERAGAMKAN DENGAN BORDER TIPIS & BINTANG KUNING) -->
   <section class="py-16 sm:py-20 md:py-24 bg-white border-y border-zinc-200/80">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
         <span class="text-xs font-mono uppercase tracking-wider text-zinc-500 bg-zinc-100 px-3 py-1 rounded-full border border-zinc-200">
-          Ulasan Pembeli
+          Contoh Ulasan Pembeli
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#18181b] mt-4 mb-3 tracking-tight">
           Apa Kata Mereka yang Sudah Melihat Video Ini?
@@ -381,14 +386,14 @@
 
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
         
-        <!-- Card 1 -->
+        <!-- Card 1 (Kreator Konten) -->
         <div class="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm hover:shadow-framer-hover transition-all flex flex-col justify-between">
           <div>
             <div class="flex text-amber-400 text-xs mb-3.5 gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-zinc-600 text-xs sm:text-sm leading-relaxed mb-6 italic">
-              "Bantu banget buat bikin reels harian! Video-nya tajam dan estetik, penonton di TikTok pada nanyain dapet dari mana."
+              "Bantu banget buat bikin reels harian! Video-nya tajam dan estetik, penonton di TikTok pada suka."
             </p>
           </div>
           <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
@@ -402,14 +407,14 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 2 (Pebisnis Travel Umroh) -->
         <div class="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm hover:shadow-framer-hover transition-all flex flex-col justify-between">
           <div>
             <div class="flex text-amber-400 text-xs mb-3.5 gap-1">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-zinc-600 text-xs sm:text-sm leading-relaxed mb-6 italic">
-              "Hemat budget promosi travel kami. Tinggal nambahin teks promo, jadinya kelihatan profesional banget."
+              "Hemat budget promosi travel. Tinggal nambahin teks promo, jadinya kelihatan profesional banget."
             </p>
           </div>
           <div class="flex items-center gap-3 pt-4 border-t border-zinc-100">
@@ -423,7 +428,7 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3 (Editor Video) -->
         <div class="bg-white rounded-2xl p-6 border border-zinc-200 shadow-sm hover:shadow-framer-hover transition-all flex flex-col justify-between sm:col-span-2 md:col-span-1">
           <div>
             <div class="flex text-amber-400 text-xs mb-3.5 gap-1">
@@ -448,7 +453,7 @@
     </div>
   </section>
 
-  <!-- 7. CHECKOUT SECTION -->
+  <!-- 7. CHECKOUT SECTION (OUTLINE ABU-ABU TIPIS) -->
   <section id="harga" class="py-16 sm:py-20 md:py-24 relative">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       
@@ -464,7 +469,7 @@
           Ambil Penawaran Spesial Hari Ini!
         </h2>
         <p class="text-zinc-600 text-xs sm:text-sm md:text-base max-w-lg mx-auto mb-8">
-          Dapatkan akses instan ke seluruh pustaka video Makkah & Madinah dengan lisensi komersial seumur hidup.
+          Dapatkan akses instan ke seluruh file video Makkah & Madinah dengan lisensi komersial seumur hidup.
         </p>
 
         <!-- Stacking Value List -->
@@ -500,12 +505,12 @@
           </div>
         </div>
 
-        <!-- Tombol CTA Utama (Direct Redirect) -->
-        <a href="https://haramain.menjadibos.com/checkout/" class="btn-direct-checkout w-full sm:max-w-md px-8 py-5 sm:py-6 rounded-2xl bg-[#4361ee] hover:bg-[#3752db] active:bg-[#3752db] text-white font-extrabold text-base sm:text-lg md:text-xl shadow-xl shadow-[#4361ee]/30 transition-all duration-300 transform hover:-translate-y-1 active:scale-[0.98] hover:shadow-2xl hover:shadow-[#4361ee]/40 flex items-center justify-center mx-auto text-center">
-          <span>Ambil Promo 99K</span>
-        </a>
+        <!-- Tombol CTA Utama: Checkout Sekarang 99K -->
+        <a href="https://haramain.menjadibos.com/checkout/" class="w-full sm:max-w-md px-8 py-5 sm:py-6 rounded-2xl bg-[#4361ee] text-white font-extrabold text-base sm:text-lg md:text-xl flex items-center justify-center mx-auto text-center">
+  <span>Ambil Promo 99K</span>
+</a>
 
-        <!-- Footer Note -->
+        <!-- Footer Note dengan Icon Petir Kuning -->
         <div class="mt-8 pt-6 border-t border-zinc-100 flex flex-col items-center gap-2 text-xs text-zinc-500">
           <div class="flex items-center gap-1.5 text-zinc-500">
             <i class="fa-solid fa-bolt text-amber-400"></i>
@@ -535,7 +540,7 @@
           <i class="fa-solid fa-chevron-down text-xs text-zinc-400 transition-transform"></i>
         </button>
         <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-100 pt-3">
-          Setelah pembayaran terkonfirmasi, kamu langsung dapet akses folder Google Drive berkecepatan tinggi yang berisi semua file video terorganisir rapi per folder kategori lokasi.
+          Setelah pembayaran terkonfirmasi, kamu langsung dapet akses folder Google Drive yang berisi semua file video terorganisir rapi per folder kategori lokasi.
         </div>
       </div>
 
@@ -574,14 +579,14 @@
     </div>
   </section>
 
-  <!-- 9. FOOTER -->
+  <!-- 9. FOOTER (DENGAN TULISAN "POWERED BY" TIPIS ABU-ABU) -->
   <footer class="border-t border-zinc-200/80 bg-white py-10 sm:py-12 text-zinc-500 text-xs">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <div class="flex flex-col items-center sm:items-start gap-1">
         <span class="text-[10px] text-zinc-400 font-medium tracking-wider uppercase">Powered by</span>
         <div class="flex items-center gap-2">
           <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#e6e7e8] text-white flex items-center justify-center font-bold text-[10px]">
-            <img src="images/Logo-MenjadiBos.png" alt="Logo" class="w-5 h-5 object-contain" onError="this.onerror=null; this.remove();" />
+            <img src="images/Logo-MenjadiBos.png" alt="Logo" class="w-5 h-5 object-contain" />
           </div>
           <span class="font-bold text-[#18181b] text-sm">MenjadiBos.com</span>
         </div>
@@ -595,23 +600,81 @@
     </div>
   </footer>
 
+  <!-- 11. CHECKOUT MODAL FORMULIR (RESPONSIF MOBILE/TABLET) -->
+  <div id="checkout-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 sm:p-7 md:p-8 border border-zinc-200 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button id="btn-close-modal" aria-label="Tutup Formulir" class="absolute top-4 right-4 text-zinc-400 hover:text-zinc-800 p-2 text-base transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-5 sm:mb-6">
+        <div class="w-10 h-10 rounded-xl bg-[#eef2ff] text-[#4361ee] flex items-center justify-center text-base mx-auto mb-2">
+          <img src="images/menjadibos-logo.svg" alt="Logo" class="w-5 h-5 object-contain" />
+        </div>
+        <h3 class="text-lg sm:text-xl font-extrabold text-[#18181b]">Formulir Akses Video</h3>
+        <p class="text-xs text-zinc-500 mt-1">Akses folder Google Drive instan via Email.</p>
+      </div>
+
+      <!-- Ringkasan Pesanan -->
+      <div class="bg-zinc-50 rounded-xl p-3.5 border border-zinc-200 text-xs text-zinc-600 space-y-1 font-mono mb-5">
+        <div class="flex justify-between font-bold text-[#18181b] pb-1.5 border-b border-zinc-200 font-sans">
+          <span>Produk:</span>
+          <span>200+ Video Makkah & Madinah Full HD</span>
+        </div>
+        <div class="flex justify-between pt-1">
+          <span>Harga Normal:</span>
+          <span class="line-through text-zinc-400">Rp 599.000</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Diskon Promo:</span>
+          <span class="text-emerald-600">- Rp 500.000</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-[#18181b] pt-1.5 border-t border-zinc-200 font-sans">
+          <span>Total Pembayaran:</span>
+          <span class="text-[#4361ee]">Rp 99.000</span>
+        </div>
+      </div>
+
+      <!-- Form Sederhana Tanpa Opsi Metode Pembayaran -->
+      <form id="order-form" class="space-y-3.5 text-left">
+        <div>
+          <label for="cust-name" class="block text-xs font-semibold text-zinc-700 mb-1">Nama Lengkap</label>
+          <input type="text" id="cust-name" required placeholder="Contoh: Muhammad Ilham" class="w-full bg-white border border-zinc-300 rounded-lg px-3.5 py-2.5 text-base sm:text-xs text-[#18181b] focus:outline-none focus:border-[#4361ee] transition-colors" />
+        </div>
+
+        <div>
+          <label for="cust-wa" class="block text-xs font-semibold text-zinc-700 mb-1">Nomor WhatsApp Aktif (Wajib)</label>
+          <input type="tel" id="cust-wa" required placeholder="Contoh: 08123456789" class="w-full bg-white border border-zinc-300 rounded-lg px-3.5 py-2.5 text-base sm:text-xs text-[#18181b] focus:outline-none focus:border-[#4361ee] transition-colors" />
+          <span class="text-[10px] text-zinc-400 mt-0.5 block">*Link Google Drive akan dikirimkan otomatis ke nomor ini.</span>
+        </div>
+
+        <div>
+          <label for="cust-email" class="block text-xs font-semibold text-zinc-700 mb-1">Alamat Email (Untuk Invite Drive)</label>
+          <input type="email" id="cust-email" required placeholder="email@gmail.com" class="w-full bg-white border border-zinc-300 rounded-lg px-3.5 py-2.5 text-base sm:text-xs text-[#18181b] focus:outline-none focus:border-[#4361ee] transition-colors" />
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-[#4361ee] hover:bg-[#3752db] active:bg-[#3752db] text-white font-bold text-xs sm:text-sm shadow-md transition-all active:scale-[0.99] mt-4 flex items-center justify-center">
+          <span>LANJUTKAN PESANAN (RP 99.000)</span>
+        </button>
+      </form>
+
+      <div class="mt-4 text-center">
+        <p class="text-[10px] text-zinc-400 flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-[#4361ee]"></i>
+          Data 100% Aman & Terverifikasi
+        </p>
+      </div>
+
+    </div>
+  </div>
+
   <!-- JAVASCRIPT INTERACTIVE LOGIC -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-      // URL Payment Gateway
-      const PAYMENT_GATEWAY_URL = "https://haramain.menjadibos.com/checkout/"; 
-
-      // 1. DIRECT CHECKOUT BUTTON REDIRECT LOGIC
-      const checkoutButtons = document.querySelectorAll('.btn-direct-checkout');
-      checkoutButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          window.location.href = PAYMENT_GATEWAY_URL;
-        });
-      });
-
-      // 2. COUNTDOWN TIMER FLASH SALE
+      // 1. COUNTDOWN TIMER FLASH SALE
       let timeInSeconds = (2 * 3600) + (45 * 60) + 19;
       const topTimerEl = document.getElementById('top-timer');
 
@@ -635,7 +698,7 @@
       }
       setInterval(updateTimer, 1000);
 
-      // 3. FAQ ACCORDION
+      // 2. FAQ ACCORDION
       const faqToggles = document.querySelectorAll('.faq-toggle');
       faqToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
@@ -652,6 +715,52 @@
           }
         });
       });
+
+      // 3. CHECKOUT MODAL LOGIC
+      const checkoutModal = document.getElementById('checkout-modal');
+      const btnOpenCheckout = document.getElementById('btn-open-checkout');
+      const btnCloseModal = document.getElementById('btn-close-modal');
+      const orderForm = document.getElementById('order-form');
+
+      function openModal() {
+        checkoutModal.classList.remove('hidden');
+        checkoutModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        checkoutModal.classList.add('hidden');
+        checkoutModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+
+      if (btnOpenCheckout) btnOpenCheckout.addEventListener('click', openModal);
+      if (btnCloseModal) btnCloseModal.addEventListener('click', closeModal);
+
+      window.addEventListener('click', (e) => {
+        if (e.target === checkoutModal) closeModal();
+      });
+
+      // Submit Formulir Langsung ke WhatsApp
+      if (orderForm) {
+        orderForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('cust-name').value;
+          const wa = document.getElementById('cust-wa').value;
+          const email = document.getElementById('cust-email').value;
+
+          const message = `Assalamu'alaikum Admin, saya ingin memesan 200+ Video Makkah & Madinah Full HD!\n\n` +
+                          `• Nama: ${name}\n` +
+                          `• WhatsApp: ${wa}\n` +
+                          `• Email (Google Drive): ${email}\n` +
+                          `• Total Promo: Rp 99.000\n\n` +
+                          `Mohon diproses untuk pengiriman akses link folder Google Drive-nya. Terima kasih!`;
+
+          const encodedMessage = encodeURIComponent(message);
+          window.open(`https://wa.me/6285169438438?text=${encodedMessage}`, '_blank');
+          closeModal();
+        });
+      }
 
     });
   </script>
