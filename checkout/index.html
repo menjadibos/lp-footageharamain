@@ -13,6 +13,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <!-- ========================================== -->
+    <!-- KODE DASAR META PIXEL (PAGEVIEW) -->
+    <!-- ========================================== -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      // INISIALISASI PIXEL KAMU
+      fbq('init', '2126723804586214'); 
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=2126723804586214&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- ========================================== -->
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -48,7 +71,7 @@
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-            <!-- LEFT COLUMN (Product Info, Price, Countdown) - Sticky Position & Exact Alignment -->
+            <!-- LEFT COLUMN (Product Info, Price, Countdown) -->
             <div class="lg:col-span-5 space-y-5 lg:sticky lg:top-6 self-start">
 
                 <!-- Main Product Detail Card -->
@@ -58,7 +81,7 @@
                         <span class="block">Makkah dan Madinah</span>
                     </h1>
 
-                    <!-- Product Hero Banner Image / Preview (Square 1:1 & Full Inner Width Alignment) -->
+                    <!-- Product Hero Banner Image -->
                     <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-gray-900 shadow-md border border-gray-200 group">
                         <img 
                             src="images/ADS-5A.jpg" 
@@ -108,7 +131,7 @@
                     </div>
                 </div>
 
-                <!-- Integrated Promo Pricing & Countdown Card (Aligned Shape & Padding) -->
+                <!-- Integrated Promo Pricing & Countdown Card -->
                 <div id="countdown-card" class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 space-y-4 text-center transition-all duration-500">
                     <div>
                         <div class="text-[11px] font-semibold text-gray-400 uppercase tracking-wide mb-0.5">
@@ -124,7 +147,7 @@
                         </div>
                     </div>
 
-                    <!-- Inner Dark Timer Box (Symmetrical Rounded Box) -->
+                    <!-- Inner Dark Timer Box -->
                     <div class="bg-[#18181b] text-white rounded-xl p-4 text-center">
                         <div id="countdown-label" class="text-xs font-medium text-zinc-400 mb-1 transition-colors duration-500">Harga promo berakhir dalam</div>
                         <div id="countdown-timer" class="text-2xl md:text-3xl font-black text-white tracking-widest font-mono transition-colors duration-500">
@@ -135,7 +158,7 @@
 
             </div>
 
-            <!-- RIGHT COLUMN (Checkout Form, Streamlined Payment Method, Coupon, Summary & CTA) -->
+            <!-- RIGHT COLUMN (Checkout Form & Summary) -->
             <div class="lg:col-span-7 space-y-5 self-start">
 
                 <!-- Buyer Data Card -->
@@ -162,7 +185,6 @@
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                     <h2 class="text-base font-bold text-gray-900 mb-3">Metode Pembayaran</h2>
                     
-                    <!-- Unified Payment Selection Card -->
                     <div class="border-2 border-blue-500 bg-blue-50/30 rounded-xl p-4 transition">
                         <div class="flex items-center justify-between mb-2">
                             <div class="flex items-center space-x-2">
@@ -179,37 +201,28 @@
                             Mendukung QRIS, E-Wallet, dan Virtual Account Bank. Pilihan metode pembayaran akhir dapat Kamu pilih langsung di halaman checkout Mayar.
                         </p>
 
-                        <!-- Available Payment Method Badges - Enlarged & Precision Grid -->
                         <div class="grid grid-cols-4 gap-2.5 sm:gap-3 pt-3 border-t border-blue-100 items-center">
-                            <!-- QRIS -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/QRIS.svg" alt="QRIS" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/00a5cf?text=QRIS';">
                             </div>
-                            <!-- GoPay -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/gopay.svg" alt="GoPay" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/00a5cf?text=GoPay';">
                             </div>
-                            <!-- DANA -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/dana.svg" alt="DANA" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/108ee9?text=DANA';">
                             </div>
-                            <!-- ShopeePay -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/shopeepay.svg" alt="ShopeePay" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/ee4d2d?text=ShopeePay';">
                             </div>
-                            <!-- BSI -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/bsi.svg" alt="BSI" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/00a39d?text=BSI';">
                             </div>
-                            <!-- BNI -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/bni.svg" alt="BNI" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/f26522?text=BNI';">
                             </div>
-                            <!-- BRI -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/bri.svg" alt="BRI" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/00529c?text=BRI';">
                             </div>
-                            <!-- Mandiri -->
                             <div class="bg-white h-13 sm:h-14 rounded-xl border border-gray-200 flex items-center justify-center p-2 sm:p-2.5 shadow-2xs hover:border-blue-300 transition-all">
                                 <img src="icon/mandiri.svg" alt="Mandiri" class="max-h-7 sm:max-h-8 max-w-[85%] w-auto object-contain" onerror="this.src='https://placehold.co/80x30/ffffff/003d79?text=Mandiri';">
                             </div>
@@ -226,7 +239,6 @@
                             Pakai
                         </button>
                     </div>
-                    <!-- Coupon Active Status -->
                     <div id="coupon-status" class="mt-2 text-xs font-medium text-emerald-600 flex items-center space-x-1">
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -335,7 +347,7 @@
         });
 
         /* Countdown Timer Logic (04:34) */
-        let totalSeconds = 4 * 60 + 34; // 274 seconds
+        let totalSeconds = 4 * 60 + 34;
         const timerDisplay = document.getElementById('countdown-timer');
         const timerCard = document.getElementById('countdown-card');
         const timerLabel = document.getElementById('countdown-label');
@@ -363,7 +375,7 @@
             }, 1000);
         }
 
-        /* Form Submit: Direct Product Link Redirect with Auto-Filled Parameters */
+        /* Form Submit: Redirect with Auto-Filled Parameters & META EVENT TRACKING */
         submitBtn.addEventListener('click', () => {
             const name = document.getElementById('buyer-name').value.trim();
             let phone = document.getElementById('buyer-phone').value.trim();
@@ -374,7 +386,29 @@
                 return;
             }
 
-            // Gunakan nomor WhatsApp asli sesuai yang diisikan oleh pembeli
+            // Calculate current total
+            const finalTotal = BASE_PRICE - discountAmount;
+
+            // =========================================================
+            // TRIGGER META PIXEL EVENTS (LEAD & INITIATE CHECKOUT)
+            // =========================================================
+            if (typeof fbq !== 'undefined') {
+                // Menandai pembeli telah mengisi form (Prospek)
+                fbq('track', 'Lead', {
+                    content_name: '200+ Footage Video Makkah dan Madinah',
+                    currency: 'IDR',
+                    value: finalTotal
+                });
+
+                // Menandai pembeli siap mengklik ke halaman pembayaran
+                fbq('track', 'InitiateCheckout', {
+                    content_name: '200+ Footage Video Makkah dan Madinah',
+                    currency: 'IDR',
+                    value: finalTotal
+                });
+            }
+            // =========================================================
+
             phone = phone.trim();
 
             // Indikator Loading
@@ -397,7 +431,7 @@
                 mayarUrl.searchParams.set('coupon', 'HARAMAIN99');
             }
 
-            // Direct Redirect ke Halaman Checkout Resmi Produk Digital Mayar
+            // Redirect ke Halaman Checkout Mayar
             window.location.href = mayarUrl.toString();
         });
 
