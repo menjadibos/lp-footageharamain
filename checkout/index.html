@@ -94,7 +94,7 @@
                     <!-- Product Hero Banner Image -->
                     <div class="relative w-full aspect-square rounded-xl overflow-hidden bg-gray-900 shadow-md border border-gray-200 group">
                         <img 
-                            src="images/ADS-5A.jpg" 
+                            src="images/ADS-5BC.jpg" 
                             alt="Footage Video Madinah - Masjid Nabawi"
                             class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500"
                             onerror="this.src='images/footage-haramain.jpg'"
@@ -157,11 +157,11 @@
                             Harga Normal <span class="line-through text-gray-400 font-bold ml-1">Rp 199.000</span>
                         </div>
                         <div class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-1">
-                            Rp 99.000
+                            Rp 49.000
                         </div>
                         <div>
                             <span class="inline-block bg-blue-100/80 text-blue-600 text-[11px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
-                                HEMAT Rp 100.000
+                                HEMAT Rp 150.000
                             </span>
                         </div>
                     </div>
@@ -253,7 +253,7 @@
                 <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
                     <h2 class="text-xs font-bold text-gray-900 mb-3">Punya Kupon?</h2>
                     <div class="flex space-x-2">
-                        <input type="text" id="coupon-input" value="HARAMAIN99" class="flex-1 uppercase px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm font-semibold text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                        <input type="text" id="coupon-input" value="HARAMAIN49" class="flex-1 uppercase px-3.5 py-2.5 rounded-lg border border-gray-300 text-sm font-semibold text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
                         <button id="apply-coupon-btn" class="bg-zinc-800 hover:bg-zinc-900 text-white font-bold px-5 py-2.5 rounded-lg text-xs transition">
                             Pakai
                         </button>
@@ -262,9 +262,9 @@
                         <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>Kupon aktif. Potongan Rp 100.000</span>
+                        <span>Kupon aktif. Potongan Rp 150.000</span>
                     </div>
-                    <p class="text-[11px] text-gray-400 mt-1">Kode kupon: <strong class="text-blue-600 cursor-pointer" onclick="document.getElementById('coupon-input').value='HARAMAIN99'">HARAMAIN99</strong></p>
+                    <p class="text-[11px] text-gray-400 mt-1">Kode kupon: <strong class="text-blue-600 cursor-pointer" onclick="document.getElementById('coupon-input').value='HARAMAIN49'">HARAMAIN49</strong></p>
                 </div>
 
                 <!-- Order Summary & Primary CTA Combined Card -->
@@ -277,15 +277,15 @@
                     </div>
 
                     <div class="flex justify-between items-center gap-3 text-xs text-emerald-600" id="summary-discount-row">
-                        <span id="summary-discount-label">Diskon (HARAMAIN99)</span>
-                        <span class="font-semibold shrink-0 text-right" id="summary-discount-val">- Rp 100.000</span>
+                        <span id="summary-discount-label">Diskon (HARAMAIN49)</span>
+                        <span class="font-semibold shrink-0 text-right" id="summary-discount-val">- Rp 150.000</span>
                     </div>
 
                     <hr class="border-gray-200 my-2">
 
                     <div class="flex justify-between items-center gap-3 pb-2">
                         <span class="text-sm font-bold text-gray-900">Total Pembayaran</span>
-                        <span class="text-xl font-extrabold text-gray-900 tracking-tight shrink-0 text-right" id="summary-total-val">Rp 99.000</span>
+                        <span class="text-xl font-extrabold text-gray-900 tracking-tight shrink-0 text-right" id="summary-total-val">Rp 49.000</span>
                     </div>
 
                     <!-- Primary Call-To-Action Button inside the summary box -->
@@ -311,8 +311,8 @@
 
         /* State Variables */
         const BASE_PRICE = 199000;
-        let discountAmount = 100000; // Default discount for HARAMAIN99 (199.000 - 100.000 = 99.000)
-        let activeCouponCode = 'HARAMAIN99';
+        let discountAmount = 150000; // Default discount for HARAMAIN49 (199.000 - 150.000 = 49.000)
+        let activeCouponCode = 'HARAMAIN49';
 
         /* DOM Elements */
         const couponInput = document.getElementById('coupon-input');
@@ -348,24 +348,24 @@
         /* Coupon Handler */
         applyCouponBtn.addEventListener('click', () => {
             const code = couponInput.value.trim().toUpperCase();
-            if (code === 'HARAMAIN99') {
+            if (code === 'HARAMAIN49') {
+                activeCouponCode = 'HARAMAIN49';
+                discountAmount = 150000;
+                couponStatus.innerHTML = `
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Kupon aktif. Potongan Rp 150.000 (Total Rp 49.000)</span>
+                `;
+                couponStatus.className = "mt-2 text-xs font-medium text-emerald-600 flex items-center space-x-1";
+            } else if (code === 'HARAMAIN99') {
                 activeCouponCode = 'HARAMAIN99';
                 discountAmount = 100000;
                 couponStatus.innerHTML = `
                     <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                     </svg>
-                    <span>Kupon aktif. Potongan Rp 100.000</span>
-                `;
-                couponStatus.className = "mt-2 text-xs font-medium text-emerald-600 flex items-center space-x-1";
-            } else if (code === 'HARAMAIN49') {
-                activeCouponCode = 'HARAMAIN49';
-                discountAmount = 150000; // 199000 - 150000 = 49000
-                couponStatus.innerHTML = `
-                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>Kupon spesial aktif. Potongan Rp 150.000 (Total Rp 49.000)</span>
+                    <span>Kupon aktif. Potongan Rp 100.000 (Total Rp 99.000)</span>
                 `;
                 couponStatus.className = "mt-2 text-xs font-medium text-emerald-600 flex items-center space-x-1";
             } else if (code === '') {
